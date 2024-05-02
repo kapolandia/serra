@@ -12,7 +12,7 @@
   --black-color-lighten: hsl(220, 20%, 18%);
   --white-color: #fff;
   --body-color: hsl(220, 100%, 97%);
-  --brand-color: #9370db;
+  --brand-color: #ff6262;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -58,7 +58,6 @@ ul {
 
 a {
   text-decoration: none !important;
-  padding: 0 !important;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -132,9 +131,10 @@ body:hover > #trailer {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black;
+  background-color: var(--black-color);
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
   z-index: var(--z-fixed);
+  border-bottom: 1px solid #2b2b2b;
 }
 
 /*=============== NAV ===============*/
@@ -230,7 +230,7 @@ body:hover > #trailer {
 .nav__link_upper {
   color: var(--white-color);
   font-weight: 900;
-  padding: 16px;
+  padding: 0px;
   padding-top: 0;
   font-size: 160px;
   display: flex;
@@ -238,6 +238,32 @@ body:hover > #trailer {
   align-items: center;
   transition: background-color .3s;
   font-family: "Roboto Condensed", sans-serif;
+  position: relative;
+  /* transition: color .5s ease-in-out, box-shadow .5s ease-in-out, padding-left .2s ease-in-out; */
+}
+
+/* .nav__link_upper:hover{
+  box-shadow: inset 800px 0 0 0 var(--brand-color);
+  padding-left: 30px;
+} */
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--brand-color);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 /* Show menu */
@@ -319,6 +345,37 @@ body:hover > #trailer {
   background-color: var(--brand-color);
 }
 
+/* COMPONENTS */
+
+.my-section{
+  background-color: var(--black-color);
+}
+
+.my-main-btn{
+  border: 1px solid #2b2b2b;
+  border-radius: 30px;
+  font-size: 18px;
+  color: #fff;
+  padding: 12px 30px;
+  transition: transform 0.1s;
+}
+
+.my-main-btn:hover{
+  border: 1px solid #2b2b2b;
+  color: #fff;
+  background-color: rgba(187, 187, 187, 0.085);
+  transform: scale(1.1);
+}
+
+.my-move-right{
+  transition: margin-left 0.1s, transform 0.1s;
+}
+
+.my-main-btn:hover .my-move-right{
+  margin-left: 20px;
+  transform: scale(1.4);
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 340px) {
@@ -328,4 +385,34 @@ body:hover > #trailer {
   }
 }
 
-/* For large devices */
+/* jumbotron */
+
+#jumbotron{
+  height: calc(100vh - 50px);
+}
+
+.my-subtitle{
+  font-size: 22px;
+  font-weight: 300;
+  color: #d8d8d8;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.my-purple-span{
+  color: var(--brand-color);
+}
+
+.jumbo-sparkle{
+  background-color: #9470db6e; /* Background color of the element */
+  box-shadow: 0 0 350px 80px #ff5f2e;
+  border-radius: 100%; /* Light effect */
+  height: 100px;
+  width: 100px;
+}
+
+.display-1{
+  font-weight: 700;
+}
+
+
