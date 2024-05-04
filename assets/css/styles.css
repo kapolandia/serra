@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --black-color: hsl(0, 0%, 5%);
+  --black-color: rgb(20, 20, 20);
   --black-color-light: hsl(220, 24%, 15%);
   --black-color-lighten: hsl(220, 20%, 18%);
   --white-color: #fff;
@@ -355,6 +355,10 @@ a:hover::before {
   background-color: #232323;
 }
 
+.my-text-black{
+  color: var(--black-color);
+}
+
 .my-main-btn{
   border: 1px solid #2b2b2b;
   border-radius: 30px;
@@ -403,13 +407,21 @@ a:hover::before {
   line-height: 1.6;
 }
 
+.my-subtitle-black{
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--black-color);
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
 .my-purple-span{
   color: var(--brand-color);
 }
 
 .jumbo-sparkle{
   background-color: #9470db6e; /* Background color of the element */
-  box-shadow: 0 0 350px 80px #ff5f2e;
+  box-shadow: 0 0 350px 80px var(--brand-color);
   border-radius: 100%; /* Light effect */
   height: 100px;
   width: 100px;
@@ -421,6 +433,35 @@ a:hover::before {
 
 .my-brand-color{
   color: var(--brand-color);
+}
+
+.my-brand-bg{
+  background-color: var(--brand-color);
+}
+
+/* Agency description */
+
+.my-img-wrapper{
+  background-color: var(--brand-color);
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.my-img-description{
+  max-width: 150px;
+}
+
+/* Agency description */
+
+
+input[type="checkbox"]:checked {
+  background-color: var(--brand-color);
+  border-color: #ff0000;
 }
 
 :root {
