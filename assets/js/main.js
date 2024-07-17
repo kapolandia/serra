@@ -10,6 +10,15 @@ const showMenu = (toggleId, navId) =>{
        // Add show-icon to show and hide the menu icon
        toggle.classList.toggle('show-icon')
    })
+
+   const navLinks = document.querySelectorAll('.nav__link_upper')
+   navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+         nav.classList.remove('show-menu')
+
+         toggle.classList.remove('show-icon')
+      })
+   })
 }
 
 showMenu('nav-toggle','nav-menu')
