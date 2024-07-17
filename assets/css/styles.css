@@ -42,6 +42,21 @@
   margin: 0;
 }
 
+/* For WebKit/Blink browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-color);
+  border-radius: 6px;
+}
+
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: var(--normal-font-size);
@@ -210,7 +225,7 @@ body:hover > #trailer {
   .nav__list {
     background-color: var(--black-color);
     padding-top: 1rem;
-    height: 100vh;
+    height: calc(100vh - 50px);
     position: fixed;
     width: 100%;
   }
@@ -232,7 +247,7 @@ body:hover > #trailer {
   font-weight: 900;
   padding: 0px;
   padding-top: 0;
-  font-size: 160px;
+  font-size: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -377,6 +392,7 @@ a:hover::before {
 
 .my-move-right{
   transition: margin-left 0.1s, transform 0.1s;
+  margin-left: 5px;
 }
 
 .my-main-btn:hover .my-move-right{
@@ -425,6 +441,37 @@ a:hover::before {
   border-radius: 100%; /* Light effect */
   height: 100px;
   width: 100px;
+}
+
+.jumbo-sparkle-2{
+  background-color: #232323;
+  box-shadow:  0 0 350px 100px var(--brand-color);
+  border-radius: 100%;
+  height: 300px;
+  width: 100px;
+}
+
+.jumbo-sparkle-3{
+  background-color: #232323;
+  box-shadow:inset  0 0 80px 15px var(--brand-color);
+  border-radius: 100%;
+  height: 300px;
+  width: 100px;
+}
+
+.jumbo-sparkle-2,
+.jumbo-sparkle-3 {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.jumbo-img-2{
+  position: absolute;left: -1110px;height: 1500px;bottom: -350px;z-index: -1;
+}
+
+.jumbo-img-3{
+  position: absolute;right: -1110px;height: 1500px;bottom: -350px;transform: scaleX(-1);z-index: -1;
 }
 
 .display-1{
@@ -559,7 +606,7 @@ h1, h2, h3, h4, span {
 }
 
 i {  
-  color: rgb(240, 240, 240);
+  color: rgba(255, 255, 255, 0.38)
 }
 
 .card-image {
@@ -572,7 +619,11 @@ i {
 
 .card-image > i {
   font-size: 6em;
-  opacity: 0.25;
+  text-shadow: 0px 0px 8px var(--brand-color);
+}
+
+.card-image > img {
+  width: 6em;
 }
 
 .card-info-wrapper {
@@ -604,6 +655,13 @@ i {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85em;
   margin-top: 8px;
+}
+
+/* Ci presentiamo */
+
+.people-img{
+  max-width: 200px;
+  border-radius: 30px;
 }
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
@@ -638,6 +696,10 @@ i {
   .card-image > i {
     font-size: 3em;
   }
+
+  .card-image > img {
+    width: 3em;
+  }
     
   .card-info-wrapper {
     padding: 0px 10px;
@@ -655,11 +717,41 @@ i {
     font-size: 0.8em;
     margin-top: 4px;
   }
+
+  .nav__link_upper {
+    font-size: 60px;
+  }
 }
 
 @media(max-width: 320px) {
   .card {
     width: 100%;
   }
+}
+
+@media(max-width: 720px) {
+  .jumbo-sparkle {
+    display: none;
+  }
+
+  .jumbo-img-2{
+    display: none;
+  }
+  
+  .jumbo-img-3{
+    display: none;
+  }
+
+  .display-1{
+    font-size: 40px;
+  }
+}
+
+footer{
+  overflow: hidden;
+}
+
+.footer-logo{
+  max-width: 100%;
 }
 
