@@ -424,6 +424,11 @@ a:hover::before {
 }
 
 /* jumbotron */
+@media (max-width: 800px) {
+  #trailer {
+    display: none;
+  }
+}
 
 #jumbotron{
   height: calc(100vh - 50px);
@@ -480,6 +485,8 @@ a:hover::before {
   left: 50%;
 }
 
+
+
 .jumbo-img-2{
   position: absolute;left: -1110px;height: 1500px;bottom: -350px;z-index: -1;
 }
@@ -523,6 +530,14 @@ a:hover::before {
 
 .my-img-description{
   max-width: 150px;
+}
+
+.jumbo-sparkle-2{
+  bottom: -250px;
+}
+
+.jumbo-sparkle-3{
+  bottom: -240px;
 }
 
 /* Agency description */
@@ -682,9 +697,29 @@ i {
 /* Ci presentiamo */
 
 .people-img{
-  max-width: 200px;
+  max-width: 250px;
   border-radius: 30px;
 }
+
+/* Contatti */
+.contact-pill{
+  box-shadow: 0px 0px 5px #2b2b2b3a;
+  border-radius: 40px;
+  align-items: center;
+  padding: 10px;
+}
+
+.contact-pill:hover{
+  box-shadow: 0px 0px 10px #ff62629a;
+  cursor: pointer;
+  background-color: #ff6262;
+  color: #fff ;
+}
+
+.contact-pill:hover i{
+  color: #fff !important;
+}
+
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
 
@@ -704,23 +739,86 @@ i {
     flex-shrink: 1;
     width: calc(50% - 4px);
   }
+
+  .people-img{
+    max-width: 200px;
+    border-radius: 30px;
+  }
+}
+
+@media(max-width: 768px) {
+
+  .people-img{
+    max-width: 300px;
+    border-radius: 30px;
+  }
+
+  .my-subtitle{
+    font-size: 18px;
+  }
+  
+  .my-subtitle-black{
+    font-size: 18px;
+
+  }
+
+  .jumbo-sparkle-2{
+    bottom: -250px;
+  }
+  
+  .jumbo-sparkle-3{
+    bottom: -240px;
+  }
+}
+
+@media(max-width: 550px) {
+  .rolumn-2{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-pill{
+    width: 300px;
+  }
+}
+
+@media(max-height: 700px) {
+  .jumbo-img-1{
+    display: none;
+  }
 }
 
 @media(max-width: 500px) {
+  .jumbo-img-1{
+    display: none;
+  }
+
+  .jumbo-sparkle{
+    display: none;
+  }
+
+  .jumbo-sparkle-2{
+    bottom: -300px;
+  }
+
+  .jumbo-sparkle-3{
+    bottom: -300px;
+  }
+
   .card {
-    height: 180px;
+    height: 250px;
   }
   
   .card-image {
-    height: 80px;  
+    height: 90px;  
   }
   
   .card-image > i {
-    font-size: 3em;
+    font-size: 5em;
   }
 
   .card-image > img {
-    width: 3em;
+    width: 5em;
   }
     
   .card-info-wrapper {
@@ -752,8 +850,10 @@ i {
 }
 
 @media(max-width: 720px) {
-  .jumbo-sparkle {
-    display: none;
+
+
+  .jumbo-img-1{
+    width: 300px;
   }
 
   .jumbo-img-2{
@@ -901,7 +1001,7 @@ footer{
   }
 
   .my-card{
-    width: 400px;
+    width: 300px;
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     background-color: var(--card-color);
