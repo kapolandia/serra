@@ -39,15 +39,6 @@ const animateTrailer = (e, interacting) => {
   });
 }
 
-const getTrailerClass = type => {
-  switch(type) {
-    case "video":
-      return "fa-solid fa-play";
-    default:
-      return "fa-solid fa-arrow-up-right"; 
-  }
-}
-
 window.onmousemove = e => {
   const interactable = e.target.closest(".interactable"),
         interacting = interactable !== null;
@@ -74,13 +65,18 @@ document.getElementById("cards").onmousemove = e => {
   };
 }
 
-document.getElementById("cards2").onmousemove = e => {
-  for(const card of document.getElementsByClassName("card")) {
-    const rect = card.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
+window.addEventListener('scroll', function() {
+  const scrollPosition = window.scrollY;
+  const firstSection = document.getElementById('first-section');
+  const footer = document.getElementById('footer');
+  if (scrollPosition > 800) {
+    firstSection.style.zIndex = -2; 
+  } else {
+    firstSection.style.zIndex = 0;
+  }
+});
 
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
-  };
-}
+
+
+
+

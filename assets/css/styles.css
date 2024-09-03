@@ -97,19 +97,22 @@ body:hover > #trailer {
   width: 20px;
   background-color: var(--brand-color);
   border-radius: 20px;
-  
+
   position: fixed;
   left: 0px;
   top: 0px;
   z-index: 10000;
-  
+
   pointer-events: none;
   opacity: 0;
-  transition: opacity 500ms ease;
-  
+  transition: opacity 500ms ease, transform 200ms ease, visibility 500ms ease;
+
   display: grid;
   place-items: center;
 }
+
+
+
 
 #trailer:not([data-type=""]) > #trailer-icon {
   opacity: 1;
@@ -414,6 +417,36 @@ a:hover::before {
   rotate: 90deg;
 }
 
+.projects-li{
+  border-bottom: 1px solid #2f2f2f;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-btn{
+  background-color: var(--brand-color);
+  border-radius: 8px;
+  color: #fff;
+  padding: 6px 12px;
+  transition: scale ;
+}
+
+.project-btn:hover{
+  box-shadow: 0px 0px 5px var(--brand-color);
+}
+
+.project-btn:active{
+  transform: scale(0.9);
+  text-decoration: none;
+}
+
+.project-btn:active::before{
+  display: none;
+}
+
+.my-w{
+  width: 60%;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 340px) {
@@ -427,6 +460,10 @@ a:hover::before {
 @media (max-width: 800px) {
   #trailer {
     display: none;
+  }
+
+  .my-w{
+    width: 100%;
   }
 }
 
@@ -483,6 +520,15 @@ a:hover::before {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
+}
+
+.jumbo-sparkle-5{
+  background-color: #9470db6e; /* Background color of the element */
+  box-shadow: 0 0 350px 80px var(--brand-color);
+  border-radius: 100%; /* Light effect */
+  height: 100px;
+  width: 100px;
+  bottom: -100px
 }
 
 
@@ -782,19 +828,14 @@ i {
   }
 }
 
-@media(max-height: 700px) {
-  .jumbo-img-1{
-    display: none;
-  }
-}
-
 @media(max-width: 500px) {
-  .jumbo-img-1{
-    display: none;
-  }
-
   .jumbo-sparkle{
     display: none;
+  }
+
+  .jumbo-img-1{
+    bottom: 0;
+    width: 300px;
   }
 
   .jumbo-sparkle-2{
@@ -806,7 +847,7 @@ i {
   }
 
   .card {
-    height: 250px;
+    height: 150px;
   }
   
   .card-image {
@@ -834,8 +875,7 @@ i {
   }
 
   .card-info-title > h4 {
-    font-size: 0.8em;
-    margin-top: 4px;
+    display: none;
   }
 
   .nav__link_upper {
@@ -849,11 +889,13 @@ i {
   }
 }
 
+.jumbo-img-1{
+  bottom: -10vh;
+}
+
 @media(max-width: 720px) {
-
-
   .jumbo-img-1{
-    width: 300px;
+    bottom: 0;
   }
 
   .jumbo-img-2{
@@ -867,14 +909,51 @@ i {
   .display-1{
     font-size: 40px;
   }
+
+  .footer-logo{
+    max-width: 100%;
+    bottom: -200px;
+  }
 }
 
 footer{
   overflow: hidden;
+  background-color: var(--black-color);
+  height: 550px
+}
+
+.footer-cover{
+  background-color: var(--black-color);
+  bottom: -280px;
 }
 
 .footer-logo{
   max-width: 100%;
+  bottom: -280px;
+}
+
+@media(max-width: 620px) {
+  .footer-logo{
+    max-width: 100%;
+    bottom: -200px;
+  }
+
+  .footer-cover{
+    background-color: var(--black-color);
+    bottom: -200px;
+  }
+}
+
+@media(max-width: 520px) {
+  .footer-logo{
+    max-width: 100%;
+    bottom: -160px;
+  }
+
+  .footer-cover{
+    background-color: var(--black-color);
+    bottom: -160px;
+  }
 }
 
 .primary-btn{

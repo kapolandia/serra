@@ -34,7 +34,7 @@
                
                <div class="nav__toggle" id="nav-toggle">
                   <i class="ri-menu-line nav__burger"></i>
-                  <i class="ri-close-line nav__close"></i>
+                  <i class="ri-close-line nav__close my-brand-color"></i>
                </div>
             </div>
 
@@ -52,30 +52,31 @@
       </header>
       <body>
          <main >
-            <div class="my-section p-5" style="margin-top: 50px;position: relative;overflow: hidden;z-index: 1;" id="jumbotron" >
-               <!-- absolute content -->
-               <div class="jumbo-sparkle" style="position: absolute;left: -80px;top: -80px;z-index: -2;"></div>
-               <div class="jumbo-sparkle" style="position: absolute;right: -80px;top: -80px;z-index: -2;"></div>
-               <img src="./assets/img/34 (telegram - @all4designer).png" style="position: absolute;max-width: 400px;right: 50%;left: 50%;
-               bottom: -10vh;transform: translate(-50%, 50%);" class="jumbo-img-1">
-               <!-- Qusti qua -->
-               <img src="./assets/img/34 (telegram - @all4designer).png" class="jumbo-img-2">
-               <img src="./assets/img/34 (telegram - @all4designer).png" class="jumbo-img-3">
-               <!-- ^^ -->
-               <div class="jumbo-sparkle-2" style="position: absolute;width: 100%;z-index: -2;"></div>
-               <div class="jumbo-sparkle-3" style="position: absolute;width: 100%;z-index: -2;"></div>
+          <section id="first-section" style="position: relative;z-index: 1;height: 100vh;width: 100%;">
+            <div class="my-section p-0 p-md-5" style="margin-top: 50px;position: fixed;overflow: hidden;z-index: -1;width: 100vw;" id="jumbotron">
+              <!-- absolute content -->
+              <div class="jumbo-sparkle" style="position: absolute;left: -80px;top: -80px;z-index: -2;"></div>
+              <div class="jumbo-sparkle" style="position: absolute;right: -80px;top: -80px;z-index: -2;"></div>
+              <img src="./assets/img/34 (telegram - @all4designer).png" style="position: absolute;max-width: 400px;right: 50%;left: 50%;
+              transform: translate(-50%, 50%);" class="jumbo-img-1">
+              <!-- Qusti qua -->
+              <img src="./assets/img/34 (telegram - @all4designer).png" class="jumbo-img-2">
+              <img src="./assets/img/34 (telegram - @all4designer).png" class="jumbo-img-3">
+              <!-- ^^ -->
+              <div class="jumbo-sparkle-2" style="position: absolute;width: 100%;z-index: -2;"></div>
+              <div class="jumbo-sparkle-3" style="position: absolute;width: 100%;z-index: -2;"></div>
 
-               <!-- absolute content -->
-               <div class="container d-flex flex-column align-items-center justify-content-center" style="z-index: 10;">
-                  <h1 class="display-1 text-white text-center font-weight-bold mt-5">Hi chief, sono <br> Davide Caporali <span class="my-brand-color">.</span></h1>
-                  <p class="my-subtitle w-75 text-center">
-                    Sono un junior fullstack web developer, con competenze in diversi linguaggi di programmazione e tecnologie front-end e back-end.
-                  </p>
-
-                  <a class="btn my-main-btn mt-4" href="#contatti">Contatti<i class="fa-solid fa-angles-right my-move-right"></i></a>
-               </div>
-            </div>
-            <div class="my-section-gray p-4" style="position: relative;overflow: hidden;">
+              <!-- absolute content -->
+              <div class="container d-flex flex-column align-items-center justify-content-center" style="z-index: 10;">
+                 <h1 class="display-1 text-white text-center font-weight-bold mt-5">Hi chief, sono <br> Davide Caporali</h1>
+                 <p class="my-subtitle w-75 text-center">
+                   Sono un junior fullstack web developer, con competenze in diversi linguaggi di programmazione e tecnologie front-end e back-end.
+                 </p>
+                 <a class="btn my-main-btn mt-4" style="z-index: 1;" href="#contatti">Contatti<i class="fa-solid fa-angles-right my-move-right"></i></a>
+              </div>
+           </div>
+          </section>
+            <div class="my-section-gray p-0 p-md-4" style="position: relative;overflow: hidden;">
               <div class="jumbo-sparkle" style="position: absolute;bottom: -170px;width: 100%;"></div>
                <div class="container d-flex flex-column justify justify-content-center align-items-center">
                   <h1 class="display-2 text-white text-center font-weight-bold mt-5">Cosa so fare <span class="my-brand-color">?</span></h1>
@@ -351,7 +352,7 @@
             </div> 
            --> 
 
-            <div class="p-5" style="background-color: white;" id="chi-sono">
+            <div class="p-0 p-md-5" style="background-color: white;" id="chi-sono">
               <div class="container d-flex flex-column justify justify-content-center align-items-center">
                 <h1 class="display-3 text-center my-text-black font-weight-bold mt-5">Finalmente ci presentiamo<span class="my-brand-color">!</span></h1>
                <div class="d-flex mt-5 mb-5 row">
@@ -373,15 +374,36 @@
               </div>
             </div>
 
-            <div class="my-section-gray p-4" style="position: relative;overflow: hidden;" id="progetti">
-              <div class="jumbo-sparkle" style="position: absolute;bottom: -170px;width: 100%;z-index: 0;"></div>
+            <div class="my-section-gray p-0 pb-5 p-md-4" style="position: relative;overflow: hidden;" id="progetti">
+              <div class="jumbo-sparkle-5" style="position: absolute;width: 100%;z-index: 0;"></div>
               <div class="container d-flex flex-column justify justify-content-center align-items-center">
                 <h1 class="display-1 text-white text-center font-weight-bold mt-5">
                   I miei progetti <i class="fa-solid fa-layer-group my-brand-color"></i>
                 </h1>
-                <p class="my-subtitle w-75 text-center">
+                <p class="my-subtitle text-center">
                   Scopri i progetti su cui ho lavorato, le mie collaborazioni e le iniziative che mi appassionano. Connettiti con me su LinkedIn o esplora il mio Github.
                 </p>
+                <ul class="text-white mt-4 my-w">
+                  <li class="projects-li p-3 d-flex">
+                    <p class="mb-0"><span class="my-brand-color">&centerdot;&nbsp;</span> 2023 <span style="opacity: 0.2;">&nbsp;|&nbsp;</span> G. Restaurant </p>
+                    <a href="https://ginosa-5eb12.web.app/" target="_blank" class="project-btn"><i class="fa-solid fa-link text-white me-2"></i>Link</a>
+                  </li>
+                  <li class="projects-li p-3 d-flex">
+                    <p class="mb-0"><span class="my-brand-color">&centerdot;&nbsp;</span> 2023 <span style="opacity: 0.2;">&nbsp;|&nbsp;</span> Betoolz </p>
+                    <a href="https://betoolz.it/" target="_blank" class="project-btn"><i class="fa-solid fa-link text-white me-2"></i>Link</a>
+                  </li>
+                  <li class="projects-li p-3 d-flex">
+                    <p class="mb-0"><span class="my-brand-color">&centerdot;&nbsp;</span> 2024 <span style="opacity: 0.2;">&nbsp;|&nbsp;</span> BoolbBnb </p>
+                    <a href="https://www.linkedin.com/posts/davide-caporali-50315b24b_sono-fiero-di-condividere-con-voi-il-risultato-activity-7234591930070835203-bXpW?utm_source=share&utm_medium=member_desktop" target="_blank" class="project-btn"><i class="fa-solid fa-link text-white me-2"></i>Link</a>
+                  </li>
+                  <li class="projects-li p-3 d-flex">
+                    <p class="mb-0"><span class="my-brand-color">&centerdot;&nbsp;</span> 2024 <span style="opacity: 0.2;">&nbsp;|&nbsp;</span> Assureo</p>
+                    <a href="https://assureo-ec8c7-bdea4.web.app/" target="_blank" class="project-btn"><i class="fa-solid fa-link text-white me-2"></i>Link</a>
+                  </li>
+                  <li class="projects-li p-3 d-flex">
+                    <p class="mb-0"><span class="my-brand-color">&centerdot;&nbsp;</span> 2024 <span style="opacity: 0.2;">&nbsp;|&nbsp;</span> Portfolio</p>
+                  </li>
+                </ul>
                 <div class="d-flex rolumn mt-5" style="z-index: 2;">
                   <div class="my-card">
                     <div class="card-content">
@@ -421,11 +443,11 @@
             </div>
             
 
-            <div class="p-5" style="background-color: white;" id="contatti">
+            <div class="p-0 p-md-5" style="background-color: white;" id="contatti">
               <div class="container d-flex flex-column justify justify-content-center align-items-center">
                 <h1 class="display-1 text-center my-text-black font-weight-bold mt-5" >Entriamo in contatto <i class="fa-solid fa-seedling my-brand-color"></i></h1>
 
-                <div class="d-flex mt-5 w-100 justify-content-center rolumn-2" >
+                <div class="d-flex mt-5 w-100 justify-content-center rolumn-2 pb-4" >
                   <div class="d-flex contact-pill m-1" onclick="window.location.href='mailto:caporalidavide78@gmail.com'">
                     <a class="d-flex align-items-center justify-content-center  text-white my-brand-bg primary-btn" style="font-size: 30px;width: 50px;height: 50px;border-radius: 100%;">
                       <i class="fa-solid fa-envelope text-white"></i>
@@ -448,13 +470,15 @@
             </div>
          </main>
       </body>
-      <footer>
-        <div class="my-section p-5">
-          <div class="container d-flex flex-column justify justify-content-center align-items-center mt-5">
-            <img src="./assets/img/header-logo-2.png" alt="" srcset="" class="footer-logo">
+      <footer id="footer" style="position: relative;z-index: -2;">
+        <div class="my-section" style="position: fixed; bottom: 0; width: 100%; z-index: -1;">
+          <div class="container d-flex flex-column justify-content-center align-items-center">
+            <img src="./assets/img/footer.png" alt="" srcset="" class="footer-logo" style="position: absolute;">
+            <div class="w-100 footer-cover" style="height: 500px;"></div>
           </div>
         </div>
       </footer>
+      
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
